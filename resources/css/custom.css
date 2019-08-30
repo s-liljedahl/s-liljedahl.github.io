@@ -1,18 +1,16 @@
 body {
-  background-image: linear-gradient(to right, rgb(235, 158, 183), rgb(255, 167, 36));
-}
-
-body {
+  	background-image: linear-gradient(to right, rgb(235, 158, 183), rgb(255, 167, 36));
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 	justify-content: center;
 	padding: 0 30px;
 	text-align: center;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
 }
 
 .intro {
-	font-family: 'Reem Kufi', sans-serif;
 	font-size: 3.75em;
   	font-weight: 600;
 }
@@ -21,3 +19,33 @@ body {
 	height: 200px;
 	width: auto;
 }
+
+.sidenav {
+	height: 100%;
+	width: 240px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 100px;
+	text-align: left;
+	overflow-x: hidden;
+	padding-top: 200px;
+  }
+  
+  .sidenav a {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #000000;
+	display: block;
+  }
+  
+  .sidenav a:hover {
+	color: rgb(255, 167, 36);
+  }
+
+  
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
