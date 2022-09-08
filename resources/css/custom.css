@@ -76,6 +76,10 @@ text {
   display: inline-block;
 }
 
-.ml15:hover .ml15:active {
+.ml15:hover {
+  transform: scale(1.3) skew(-10deg);
+}
+
+.ml15:active {
   transform: scale(1.3) skew(-10deg);
 }
