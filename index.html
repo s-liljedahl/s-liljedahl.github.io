@@ -1,26 +1,83 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>Sofie Liljedahl</title>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="shortcut icon" href="./resources/images/favicon.png" />
-
-    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="resources/css/custom.css" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body>
-    <div class="intro">
 
-      <img src="resources/logo.svg" class="logo">
+  <body id="body">
+    <svg
+      id="textSvg"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 500 500"
+    >
+      <path
+        d="M50, 250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+        id="textcircle"
+        fill="none"
+      ></path>
 
+      <text id="innerCircle" dy="40" textLength="1220">
+        <textPath xlink:href="#textcircle">
+          hejhej - hello - hejhej - hello - hejhej - hello -
+        </textPath>
+      </text>
+
+      <text id="outerCircle" textLength="1220">
+        <textPath xlink:href="#textcircle">
+          my name is sofie ~ i am 25 years old ~ i work as a software developer
+          ~ i live in stockholm ~
+        </textPath>
+      </text>
+    </svg>
+
+    <div class="container">
+      <h1 class="ml15">
+        <span class="word">SOFIE</span><br />
+        <span class="word">LILJEDAHL</span>
+      </h1>
     </div>
 
-    <script src="like_button.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+      anime({
+        targets: '#body',
+        scale: [0, 1],
+        easing: 'easeInOutSine',
+        duration: 1000,
+        loop: false,
+      });
+      anime
+        .timeline({ loop: false })
+        .add({
+          duration: 1000,
+        })
+        .add({
+          targets: '.ml15 .word',
+          scale: [14, 1],
+          opacity: [0, 1],
+          easing: 'easeOutCirc',
+          duration: 1000,
+          delay: (el, i) => 800 * i,
+        })
+        .add({
+          duration: 5000,
+        });
 
+      anime({
+        targets: '#innerCircle',
+        rotate: '360deg',
+        easing: 'linear',
+        duration: 50000,
+        loop: true,
+      });
+      anime({
+        targets: '#outerCircle',
+        rotate: '-360deg',
+        easing: 'linear',
+        duration: 60000,
+        loop: true,
+      });
+    </script>
   </body>
 </html>

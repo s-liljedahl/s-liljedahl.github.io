@@ -1,0 +1,12 @@
+:root {
+  --inner-text: #be5f00;
+  --big-outline: #940000;
+  --big-shadow: #940000;
+  --outer-text: #d330cb;
+  --big-color: #e6a122;
+  --background: #172eff;
+  --background2: #2e1c00;
+
+  --font-title: 'Arial Black', Gadget, sans-serif;
+  --font-body: 'Comic Sans MS', cursive, sans-serif;
+}

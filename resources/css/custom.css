@@ -1,23 +1,80 @@
-body {
-  background-image: linear-gradient(to right, rgb(235, 158, 183), rgb(255, 167, 36));
+@import 'variables.css';
+
+html {
+  background-color: var(--background);
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	justify-content: center;
-	padding: 0 30px;
-	text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.intro {
-	font-family: 'Reem Kufi', sans-serif;
-	font-size: 3.75em;
-  	font-weight: 600;
+svg {
+  width: 500px;
+  position: absolute;
+  float: center;
+  z-index: -1;
+  border-radius: 100%;
+  transition: all 0.2s ease-in-out;
 }
 
-.logo {
-	height: 200px;
-	width: auto;
+svg:hover {
+  transform: scale(1.5);
+}
+
+text {
+  font-family: var(--font-body);
+  transform-origin: 50% 50%;
+}
+
+#innerCircle {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  fill: var(--inner-text);
+}
+#outerCircle {
+  font-size: 15px;
+  letter-spacing: 10px;
+  fill: var(--outer-text);
+}
+
+#textCircle {
+  transform: rotateZ(30);
+  fill: var(--background2);
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ml15 {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-title);
+  color: var(--big-color);
+  font-size: 60px;
+  letter-spacing: -1px;
+  vertical-align: top;
+  transform: skew(-10deg);
+  text-shadow: 10px 10px var(--big-shadow), 9px 9px var(--big-shadow),
+    8px 8px var(--big-shadow), 7px 7px var(--big-shadow),
+    6px 6px var(--big-shadow), 5px 5px var(--big-shadow),
+    4px 4px var(--big-shadow), 3px 3px var(--big-shadow),
+    2px 2px var(--big-shadow), 1px 1px var(--big-shadow);
+  -webkit-text-stroke: 1px var(--big-outline);
+}
+
+.ml15 .word {
+  display: inline-block;
+  line-height: 1em;
+  letter-spacing: -1px;
+}
+.ml13 .word .letter {
+  display: inline-block;
 }
