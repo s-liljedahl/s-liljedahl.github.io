@@ -7,6 +7,6 @@
   --background: #172eff;
   --background2: #2e1c00;
 
-  --font-title: 'Arial Black', Gadget, sans-serif;
-  --font-body: 'Comic Sans MS', cursive, sans-serif;
+  --font-title: 'Arial Black', monospace, sans-serif;
+  --font-body: 'Comic Sans MS', monospace, sans-serif;
 }
